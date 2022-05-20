@@ -12,9 +12,10 @@ function App() {
           - MADE BY MBHM -
         </a>
       <div className="Wrapper">
-      <button onClick={() => setCount(count - 1)} className="Decr">-</button>
+      {/* <button onClick={() => setCount(0)} className="Rest">Reset</button>  */}
+      <button onClick={() => (count <= 0 ? "" : setCount(count - 1))} className="Decr">-</button>
       <p className="Numb">{count}</p>
-      <button onClick={() => setCount(count + 1)} className="Incr">+</button>
+      <button onClick={() => (count >= 11 ? "" : setCount(count + 1))} className="Incr">+</button>
       </div>
     </div>
   );
